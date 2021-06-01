@@ -3,27 +3,27 @@ import '../constants.dart';
 
 ThemeData lightThemeData(BuildContext context) {
   return ThemeData.light().copyWith(
-    primaryColor: primaryColor,
+    primaryColor: kPrimaryColor,
     scaffoldBackgroundColor: Colors.white,
     appBarTheme: appBarTheme,
     iconTheme: IconThemeData(color: contentColorLightTheme),
     colorScheme: ColorScheme.light(
-      primary: primaryColor,
+      primary: kPrimaryColor,
       secondary: secondaryColor,
       error: errorColor,
     ),
     inputDecorationTheme: inputDecorationTheme.copyWith(
-        fillColor: primaryColor.withOpacity(0.05)),
+        fillColor: kPrimaryColor.withOpacity(0.05)),
   );
 }
 ThemeData darkThemeData(BuildContext context) {
   return ThemeData.dark().copyWith(
-    primaryColor: primaryColor,
+    primaryColor: kPrimaryColor,
     scaffoldBackgroundColor: contentColorLightTheme,
     appBarTheme: appBarTheme,
     iconTheme: IconThemeData(color: contentColorDarkTheme),
     colorScheme: ColorScheme.dark().copyWith(
-      primary: primaryColor,
+      primary: kPrimaryColor,
       secondary: secondaryColor,
       error: errorColor,
     ),

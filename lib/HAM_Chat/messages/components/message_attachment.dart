@@ -61,7 +61,7 @@ class MessageAttachmentCard extends StatelessWidget {
             Container(
               padding: EdgeInsets.all(defaultPadding * 0.75),
               decoration: BoxDecoration(
-                color: primaryColor,
+                color: kPrimaryColor,
                 shape: BoxShape.circle,
               ),
               child: Icon(

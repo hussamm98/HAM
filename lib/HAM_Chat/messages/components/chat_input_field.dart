@@ -42,7 +42,7 @@ class _ChatInputFieldState extends State<ChatInputField> {
             ),
             child: Row(
               children: [
-                Icon(Icons.mic, color: primaryColor),
+                Icon(Icons.mic, color: kPrimaryColor),
                 SizedBox(width: defaultPadding),
                 Expanded(
                   child: Row(
@@ -61,7 +61,7 @@ class _ChatInputFieldState extends State<ChatInputField> {
                                       child: Icon(
                                         Icons.attach_file,
                                         color: _showAttachment
-                                            ? primaryColor
+                                            ? kPrimaryColor
                                             : Theme.of(context)
                                                 .textTheme
                                                 .bodyText1

@@ -12,7 +12,7 @@ class MessagesScreen extends StatelessWidget {
   }
   AppBar buildAppBar(BuildContext context) {
     return AppBar(
-      backgroundColor: primaryColor,
+      backgroundColor: kPrimaryColor,
       automaticallyImplyLeading: false,
       title: Row(
         children: [

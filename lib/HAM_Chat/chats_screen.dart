@@ -20,7 +20,7 @@ class ChatsScreen extends StatelessWidget {
             ),
           );
         },
-        backgroundColor: primaryColor,
+        backgroundColor: kPrimaryColor,
         child: Icon(
           Icons.person_add_alt_1,
           color: Colors.white,
@@ -31,7 +31,7 @@ class ChatsScreen extends StatelessWidget {
 
   AppBar buildAppBar(BuildContext context) {
     return AppBar(
-      backgroundColor: primaryColor,
+      backgroundColor: kPrimaryColor,
       elevation: 0,
       automaticallyImplyLeading: false,
       title: Text("My Chats"),
