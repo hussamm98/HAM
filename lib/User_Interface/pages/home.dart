@@ -40,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: EdgeInsets.all(40.0),
               decoration: BoxDecoration(
                 //     color: Theme.of(context).primaryColor,
-                color: secondaryColor,
+                color: kPrimaryColor,
                 borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(60),
                     topRight: Radius.circular(60),
@@ -62,7 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Text(
                         "Current Alerts",
                         style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.white,
                           fontSize: 20.0,
                           fontWeight: FontWeight.bold,
                         ),

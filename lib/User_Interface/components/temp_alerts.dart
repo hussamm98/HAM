@@ -66,7 +66,7 @@ class _RecentsAlertsState extends State<RecentsAlerts> {
                           alert.courseName,
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 18.0,
+                            fontSize: 19.0,
                           ),
                         ),
                         SizedBox(height: 15.0),
@@ -111,7 +111,7 @@ class _RecentsAlertsState extends State<RecentsAlerts> {
                       right: 0.0,
                       child: CustomPaint(
                         foregroundPainter: CountdownPainter(
-                          bgColor: kBGColor,
+                          bgColor: kTextColor,
                           lineColor: _getColor(context, percent),
                           percent: percent,
                           width: 4.0,
@@ -125,15 +125,15 @@ class _RecentsAlertsState extends State<RecentsAlerts> {
                                 "$hoursLeft",
                                 style: TextStyle(
                                   color: _getColor(context, percent),
-                                  fontSize: 26.0,
+                                  fontSize: 24.0,
                                   fontWeight: FontWeight.w600,
                                 ),
                               ),
                               Text(
-                                "hours left",
+                                "Hours left",
                                 style: TextStyle(
                                   color: _getColor(context, percent),
-                                  fontSize: 13.0,
+                                  fontSize: 12.0,
                                 ),
                               ),
                             ],

@@ -20,13 +20,15 @@ class MyCourses extends StatelessWidget {
                 style: TextStyle(
                     fontSize: 16,
                     color: Colors.black,
-                    fontWeight: FontWeight.normal),
+                    fontWeight: FontWeight.normal
+                ,
+                fontStyle: FontStyle.italic),
                 children: [
                   TextSpan(
                     text: "${courses.length}",
                     // hereeeeeeeeeeeeeee yangmmmmmmmmm
                     style: TextStyle(
-                        fontSize: 16,
+                        fontSize: 20,
                         color: Colors.black,
                         fontWeight: FontWeight.bold),
                   ),
@@ -81,7 +83,7 @@ Container buildTaskItem(int numDays, String courseTitle, Color color) {
             ),
             Text(
               "$numDays Credit Hours", // there is a code here :"))))))
-              style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold, color: Colors.white),
             ),
           ],
         ),
@@ -93,7 +95,7 @@ Container buildTaskItem(int numDays, String courseTitle, Color color) {
           child: Center(
             child: Text(
               courseTitle,
-              style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 18,  fontWeight: FontWeight.bold),
             ),
           ),
         ),
