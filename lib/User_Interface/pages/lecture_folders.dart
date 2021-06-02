@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_auth/User_Interface/pages/pdfviewer.dart';
 import 'lecture_temp.dart';
 
 class AllLectures extends StatelessWidget {
@@ -25,37 +26,81 @@ class AllLectures extends StatelessWidget {
             child: MyLecture(
               lecname: "lecture 1",
             ),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return pdfviewer();
+                  },
+                ),
+              );
+            },
           ),
           GestureDetector(
             child: MyLecture(
               lecname: "lecture 2",
             ),
-            onTap: () {},
+            onTap: () {Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return pdfviewer();
+                  },
+                ),
+              );},
           ),
           GestureDetector(
             child: MyLecture(
               lecname: "lecture 3",
             ),
-            onTap: () {},
+            onTap: () {Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return pdfviewer();
+                  },
+                ),
+              );},
           ),
           GestureDetector(
             child: MyLecture(
               lecname: "lecture 4",
             ),
-            onTap: () {},
+            onTap: () {Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return pdfviewer();
+                  },
+                ),
+              );},
           ),
           GestureDetector(
             child: MyLecture(
               lecname: "lecture 5",
             ),
-            onTap: () {},
+            onTap: () {Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return pdfviewer();
+                  },
+                ),
+              );},
           ),
           GestureDetector(
             child: MyLecture(
               lecname: "lecture 6",
             ),
-            onTap: () {},
+            onTap: () {Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return pdfviewer();
+                  },
+                ),
+              );},
           ),
         ],
       ),

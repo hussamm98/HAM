@@ -12,7 +12,6 @@ import 'package:flutter_auth/User_Interface/pages/confirm_password.dart';
 import 'package:flutter_svg/svg.dart';
 import 'UserModel.dart';
 import 'change_password.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
 import 'change_password.dart';
 import 'home.dart';
@@ -64,26 +63,25 @@ class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController passController = new TextEditingController();
 
   //---------------- Shared preferences --------------------------------//
-  SharedPreferences prefs;
 
   String email;
   String pass;
 
-  saveData(String email, String pass) async {
-    prefs = await SharedPreferences.getInstance();
-    prefs.setString('email', email);
-    prefs.setString('password', pass);
-  }
+  // saveData(String email, String pass) async {
+  //   prefs = await SharedPreferences.getInstance();
+  //   prefs.setString('email', email);
+  //   prefs.setString('password', pass);
+  // }
 
-  getData() async {
-    prefs = await SharedPreferences.getInstance();
-    setState(() {
-      email = prefs.getString('email');
-      pass = prefs.getString('password');
-      print(email);
-      print(pass);
-    });
-  }
+  // getData() async {
+  //   prefs = await SharedPreferences.getInstance();
+  //   setState(() {
+  //     email = prefs.getString('email');
+  //     pass = prefs.getString('password');
+  //     print(email);
+  //     print(pass);
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {

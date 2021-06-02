@@ -19,6 +19,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_cached_pdfview: ^0.3.1
+  
 
 
 
@@ -28,7 +30,6 @@ dependencies:
   intl: ^0.16.0
   cupertino_icons: ^0.1.2
   http: ^0.12.1
-  shared_preferences: ^2.0.5
   flutter_svg: ^0.19.1
 
 dev_dependencies:
