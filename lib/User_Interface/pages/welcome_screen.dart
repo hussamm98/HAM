@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_auth/User_Interface/pages/login_screen.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../constants.dart';
+
 class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -61,7 +63,7 @@ class WelcomeScreen extends StatelessWidget {
               height: 60,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(25),
-                color: Color(0xFF6F35A5),
+                color: kPrimaryColor,
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_auth/User_Interface/components/assistants_list.dart';
 import 'package:flutter_auth/User_Interface/components/doctors_list.dart';
 
+import '../../constants.dart';
+
 class AllOfDocs extends StatefulWidget {
   @override
   _AllOfDocsState createState() => _AllOfDocsState();
@@ -14,11 +16,11 @@ class _AllOfDocsState extends State<AllOfDocs> {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.purple,
+        backgroundColor: kPrimaryColor,
         elevation: 0,
         title: Text(
           "Listing All Doctors",
-          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold , fontStyle: FontStyle.italic),
         ),
       ),
       body: SingleChildScrollView(

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../constants.dart';
+
 Widget headerChild(String header, var value) => new Expanded(
         child: new Column(
       children: <Widget>[
@@ -15,7 +17,7 @@ Widget headerChild(String header, var value) => new Expanded(
           '$value',
           style: new TextStyle(
               fontSize: 17.0,
-              color: const Color(0xff582564),
+              color: kBGColor,
               fontWeight: FontWeight.bold),
         )
       ],

@@ -38,7 +38,7 @@ List demeChatMessages = [
     isSender: false,
   ),
   ChatMessage(
-    text: "this picture will help you",
+    text: "this video will help you",
     messageType: ChatMessageType.text,
     messageStatus: MessageStatus.viewed,
     isSender: false,

@@ -13,7 +13,7 @@ class VideoMessage extends StatelessWidget {
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(8),
-              child: Image.asset("assets/images/logo.png"),
+              child: Image.asset("assets/images/info.png"),
             ),
             Container(
               height: 25,

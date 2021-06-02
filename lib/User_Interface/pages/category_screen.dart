@@ -1,10 +1,17 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_auth/User_Interface/components/drawer.dart';
 import 'package:flutter_auth/User_Interface/components/my_semester.dart';
 
+import 'UserModel.dart';
+
 class CategoryScreen extends StatelessWidget {
+  final UserModel user;
+
+  const CategoryScreen({Key key, this.user}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Color(0xfff6f7f9),
       appBar: AppBar(
@@ -14,7 +21,7 @@ class CategoryScreen extends StatelessWidget {
           style: TextStyle(fontSize: 24, fontStyle: FontStyle.italic),
         ),
       ),
-      drawer: MyDrawer(),
+      drawer: MyDrawer(user: user),
       body: ListView.builder(
           itemCount: products.length,
           itemBuilder: (BuildContext context, int index) {
@@ -26,7 +33,7 @@ class CategoryScreen extends StatelessWidget {
                 );
               },
               child: Container(
-                margin: EdgeInsets.symmetric(vertical: 22, horizontal: 25),
+                margin: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(30),
@@ -43,12 +50,15 @@ class CategoryScreen extends StatelessWidget {
                     "assets/images/logo.jpg",
                     fit: BoxFit.fill,
                     width: 60,
-                    height: 100,
+                    height: size.height,
                   ),
-                  title: Text(
-                    "Level ${index + 1}",
-                    style: TextStyle(
-                      fontSize: 26,
+                  title: Container(
+                    padding: EdgeInsets.only(top: 20),
+                    child: Text(
+                      "Level ${index + 1}",
+                      style: TextStyle(
+                        fontSize: 27,
+                      ),
                     ),
                   ),
                   subtitle: Column(
@@ -56,14 +66,12 @@ class CategoryScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text(
-                        '    is my level.',
+                        '   is my level.',
                         style: TextStyle(
                             fontSize: 14, fontStyle: FontStyle.italic),
                       ),
-                      SizedBox(height: 1),
-                      Container(
-                        height: 28,
-                      ),
+                      SizedBox(height: size.height * 0.008),
+                      Container(height: size.height * 0.015),
                     ],
                   ),
                 ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-const kTextColor = Color(0xFF6C7174);
-const kPrimaryColor = Color(0xFF6F35A5);
+
+const kTextColor = Color(0xFfa8d8ea);
+const kPrimaryColor = Color(0xFF6a197d);
 const kPrimaryLightColor = Color(0xFFF1E6FF);
 const kHourColor = Color(0xFFF5C35A);
 const kCardColor = Color(0xFF282B30);
@@ -10,13 +11,12 @@ const kCalendarDay = TextStyle(
   fontSize: 16.0,
 );
 
-const secondaryColor = Color(0xFFFE9901);
+
+const secondaryColor = Color(0xFFe61c5d);
 const contentColorLightTheme = Color(0xFF1D1D35);
 const contentColorDarkTheme = Color(0xFFF5FCF9);
 const warninngColor = Color(0xFFF3BB1C);
 const errorColor = Color(0xFFF03738);
 const defaultPadding = 14.0;
-
-// For demo
 final List<String> demoContactsImage =
 List.generate(5, (index) => "assets/images/user_${index + 1}.png");

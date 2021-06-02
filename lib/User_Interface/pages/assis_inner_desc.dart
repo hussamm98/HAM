@@ -39,7 +39,7 @@ class _AsDetailPageState extends State<AsDetailPage> {
           child: Stack(
             children: <Widget>[
               Container(
-                height: height *0.7,
+                height: height *0.65,
                 decoration: BoxDecoration(
                     image: DecorationImage(
                   image: NetworkImage(widget.assistant.image),

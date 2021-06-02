@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_auth/User_Interface/pages/UserModel.dart';
 
+import '../../constants.dart';
+
 class MyCourses extends StatelessWidget {
   final List<Course> courses;
 
@@ -17,7 +19,7 @@ class MyCourses extends StatelessWidget {
                 text: "Your Courses Number is: ",
                 style: TextStyle(
                     fontSize: 16,
-                    color: Color(0xFFEEEEEE),
+                    color: Colors.black,
                     fontWeight: FontWeight.normal),
                 children: [
                   TextSpan(
@@ -41,7 +43,7 @@ class MyCourses extends StatelessWidget {
             ////// fe sho3'l raye2 hnaaaaaaaaaaaaaaaaaaaa
             children: courses
                 .map((course) => buildTaskItem(
-                    int.parse(course.hours), course.courseName, Colors.blue))
+                    int.parse(course.hours), course.courseName, kTextColor))
                 .toList()),
       )
     ]);

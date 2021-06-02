@@ -22,7 +22,7 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
     ScheduleScreen(
       user: user,
     ),
-    CategoryScreen(),
+    CategoryScreen(user : user),
     ProfileScreen(user: user)
   ];
 

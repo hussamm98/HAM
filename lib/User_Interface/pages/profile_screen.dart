@@ -3,6 +3,7 @@ import 'package:flutter_auth/User_Interface/components/drawer.dart';
 import 'package:flutter_auth/User_Interface/components/profile_items.dart';
 import 'package:flutter_auth/User_Interface/pages/UserModel.dart';
 
+import '../../constants.dart';
 import 'change_password.dart';
 import 'welcome_screen.dart';
 
@@ -26,7 +27,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         children: <Widget>[
           Container(
             decoration: BoxDecoration(
-              color: Colors.pinkAccent,
+              color:kPrimaryColor,
             ),
           ),
           Scaffold(
@@ -49,12 +50,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   );
                 },)
               ],
-              backgroundColor: Colors.pinkAccent,
+              backgroundColor:kPrimaryColor,
             ),
             drawer: MyDrawer(
               user: this.widget.user,
             ),
-            backgroundColor: Colors.pinkAccent,
+            backgroundColor:kPrimaryColor,
             body: Container(
               child: Stack(
                 children: <Widget>[
@@ -79,7 +80,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           Text(
                             '${widget.user.name}',
                             style: new TextStyle(
-                                fontSize: 20.0,
+                                fontSize: 25.0,
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold),
                           )
@@ -136,14 +137,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               infoChild(_width, "assets/icons/department.svg",
                                   '${widget.user.department}'),
                               // hereeeeee
+                              SizedBox(
+                                height: _height / 50,
+                              ),
                               Center(
                                 child: GestureDetector(
                                   child:
                                   Text(
-                                    "Change My Password",
+                                    "Change Password",
                                     style: TextStyle(
-                                        color: Color(0xFF6F35A5),
-                                        fontSize: 20,
+                                        color: kPrimaryColor,
+                                        fontSize: 16,
                                         fontWeight: FontWeight.bold),
                                   ),
                                   onTap: () {

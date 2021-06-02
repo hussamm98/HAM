@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_auth/User_Interface/components/Sec_rounded_password_field.dart';
 import 'package:flutter_auth/User_Interface/components/background.dart';
-import 'package:flutter_auth/User_Interface/components/bottom_navigation.dart';
 import 'package:flutter_auth/User_Interface/components/navigation_bar.dart';
 import 'package:flutter_auth/User_Interface/components/rounded_button.dart';
 import 'package:flutter_auth/User_Interface/components/rounded_input_field.dart';
