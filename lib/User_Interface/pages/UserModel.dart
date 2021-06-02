@@ -13,7 +13,11 @@ class UserModel {
     this.academicid,
     this.name,
     this.email,
-    this.imageUrl,
+    this.gpa,
+    this.totalScore,
+    this.level,
+    this.phoneNumber,
+    this.image,
     this.department,
     this.id,
   });
@@ -25,7 +29,11 @@ class UserModel {
   int academicid;
   String name;
   String email;
-  String imageUrl;
+  double gpa;
+  int totalScore;
+  int level;
+  String phoneNumber;
+  String image;
   String department;
   String id;
 
@@ -46,7 +54,11 @@ class UserModel {
         academicid: json["academicid"] == null ? null : json["academicid"],
         name: json["name"] == null ? null : json["name"],
         email: json["email"] == null ? null : json["email"],
-        imageUrl: json["imageUrl"] == null ? null : json["imageUrl"],
+        gpa: json["gpa"] == null ? null : json["gpa"].toDouble(),
+        totalScore: json["totalScore"] == null ? null : json["totalScore"],
+        level: json["level"] == null ? null : json["level"],
+        phoneNumber: json["phoneNumber"] == null ? null : json["phoneNumber"],
+        image: json["image"] == null ? null : json["image"],
         department: json["department"] == null ? null : json["department"],
         id: json["id"] == null ? null : json["id"],
       );
@@ -63,7 +75,11 @@ class UserModel {
         "academicid": academicid == null ? null : academicid,
         "name": name == null ? null : name,
         "email": email == null ? null : email,
-        "imageUrl": imageUrl == null ? null : imageUrl,
+        "gpa": gpa == null ? null : gpa,
+        "totalScore": totalScore == null ? null : totalScore,
+        "level": level == null ? null : level,
+        "phoneNumber": phoneNumber == null ? null : phoneNumber,
+        "image": image == null ? null : image,
         "department": department == null ? null : department,
         "id": id == null ? null : id,
       };

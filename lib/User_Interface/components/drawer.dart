@@ -36,7 +36,7 @@ class MyDrawer extends StatelessWidget {
             currentAccountPicture: ClipRRect(
               borderRadius: BorderRadius.circular(200),
               child: Image.network(
-                'http://hussam69-001-site1.dtempurl.com/uploads/images/Image085905154320profile_pic.jpg.jpg',
+                '${user.image}',
                 width: 150,
                 height: 150,
               ),
@@ -158,16 +158,19 @@ class MyDrawer extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(50.0),
-            child: RoundedButton( text: "SignOut" , press: (){
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return WelcomeScreen();
-                  },
-                ),
-              );
-            },),
+            child: RoundedButton(
+              text: "SignOut",
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return WelcomeScreen();
+                    },
+                  ),
+                );
+              },
+            ),
           )
         ],
       ),

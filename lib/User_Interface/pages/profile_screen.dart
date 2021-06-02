@@ -27,7 +27,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         children: <Widget>[
           Container(
             decoration: BoxDecoration(
-              color:kPrimaryColor,
+              color: kPrimaryColor,
             ),
           ),
           Scaffold(
@@ -35,27 +35,28 @@ class _ProfileScreenState extends State<ProfileScreen> {
               elevation: 0,
               actions: <Widget>[
                 IconButton(
-                icon:  Icon(Icons.login_rounded),
-                color: Colors.white,
-                iconSize: 30,
-                padding: EdgeInsets.only(right:17),
-                onPressed: (){
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return WelcomeScreen();
-                      },
-                    ),
-                  );
-                },)
+                  icon: Icon(Icons.login_rounded),
+                  color: Colors.white,
+                  iconSize: 30,
+                  padding: EdgeInsets.only(right: 17),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return WelcomeScreen();
+                        },
+                      ),
+                    );
+                  },
+                )
               ],
-              backgroundColor:kPrimaryColor,
+              backgroundColor: kPrimaryColor,
             ),
             drawer: MyDrawer(
               user: this.widget.user,
             ),
-            backgroundColor:kPrimaryColor,
+            backgroundColor: kPrimaryColor,
             body: Container(
               child: Stack(
                 children: <Widget>[
@@ -69,7 +70,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           ClipRRect(
                             borderRadius: BorderRadius.circular(200),
                             child: Image.network(
-                              'http://hussam69-001-site1.dtempurl.com/uploads/images/Image085905154320profile_pic.jpg.jpg',
+                              '${widget.user.image}',
                               width: 150,
                               height: 150,
                             ),
@@ -115,9 +116,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             child: new Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
-                                  headerChild('GCH', 110),
-                                  headerChild('Level', 4),
-                                  headerChild('GPA', 2.69),
+                                  headerChild('GCH',
+                                      '${widget.user.totalScore}'.toString()),
+                                  headerChild('Level',
+                                      '${widget.user.level}'.toString()),
+                                  headerChild(
+                                      'GPA', '${widget.user.gpa}'.toString()),
                                 ]),
                           ),
                         ),
@@ -128,7 +132,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               infoChild(_width, "assets/icons/email.svg",
                                   '${widget.user.email}'), // hereeeeeee
                               infoChild(_width, "assets/icons/phone.svg",
-                                  '${widget.user.name}'),
+                                  '${widget.user.phoneNumber}'),
                               // hereeeeee
 
                               infoChild(_width, "assets/icons/id.svg",
@@ -142,8 +146,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               ),
                               Center(
                                 child: GestureDetector(
-                                  child:
-                                  Text(
+                                  child: Text(
                                     "Change Password",
                                     style: TextStyle(
                                         color: kPrimaryColor,
