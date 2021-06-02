@@ -72,10 +72,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-            SizedBox(height: size.height *0),
+            SizedBox(height: size.height *0.05),
             Container(
                 width: double.infinity,
-                height: 350,
                 color: kTextColor,
                 margin: EdgeInsets.all(30),
                 child: RecentsAlerts(
