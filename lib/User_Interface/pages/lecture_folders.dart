@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'lecture_temp.dart';
 
 class AllLectures extends StatelessWidget {
@@ -12,7 +11,7 @@ class AllLectures extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         title: Text(
-          "Lectures ${current + 1}",
+          "Lectures",
           style: TextStyle(fontSize: 23, fontStyle: FontStyle.italic),
         ),
       ),

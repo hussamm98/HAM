@@ -55,131 +55,143 @@ class _BuildClassesState extends State<BuildClasses> {
     return FutureBuilder<ScheduleModel>(
         future: buildUser(id, satudrday),
         builder: (context, AsyncSnapshot<dynamic> snapshot) {
-          print(snapshot);
-          print(snapshot.data.sessions);
-          final sessionList = snapshot.data.sessions;
-          //if (snapshot.connectionState == ConnectionState.done) {
-          //return Center(child: CircularProgressIndicator());
-          // }
+          if (snapshot.connectionState == ConnectionState.waiting ||
+              snapshot.data == null) {
+            return Center(child: CircularProgressIndicator());
+          } else {
+            //if (snapshot.connectionState == ConnectionState.done) {
+            //return Center(child: CircularProgressIndicator());
+            // }
 
-          return ListView.builder(
-            shrinkWrap: true,
-            itemCount: sessionList.length,
-            itemBuilder: (BuildContext context, int index) {
-              Session c = sessionList[index];
+            return ListView.builder(
+              shrinkWrap: true,
+              itemCount: snapshot.data.sessions.length,
+              itemBuilder: (BuildContext context, int index) {
+                print(snapshot);
+                print(snapshot.data.sessions);
+                final sessionList = snapshot.data.sessions;
 
-              _getStatus(c);
-              return Column(
-                children: <Widget>[
-                  Row(
-                    children: <Widget>[
-                      Text(
-                        "${dateFormat.format(c.dateS)}",
-                        style: TextStyle(
-                          color: c.isPassed
-                              ? Colors.white.withOpacity(0.2)
-                              : Colors.white,
-                          fontSize: 15.0,
-                        ),
-                      ),
-                      SizedBox(width: 42.0),
-                      _getTime(c, context),
-                      SizedBox(width: 15.0),
-                      Text(
-                        c.nameOfCourse,
-                        style: TextStyle(
-                          color: c.isPassed
-                              ? Colors.yellow.withOpacity(0.4)
-                              : Colors.white,
-                          fontSize: 18.0,
-                        ),
-                      ),
-                      // SizedBox(width: 30.0),
-                      // c.isHappening
-                      //     ? Container(
-                      //         height: 25.0,
-                      //         width: 40.0,
-                      //         decoration: BoxDecoration(
-                      //           color: Theme.of(context).accentColor,
-                      //           borderRadius: BorderRadius.circular(5.0),
-                      //         ),
-                      //       )
-                      //     : Container(),
-                    ],
-                  ),
-                  SizedBox(height: 12.0),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Container(
-                        margin: EdgeInsets.only(left: 90.0, bottom: 50.0),
-                        width: 0.4,
-                        height: 80.0,
-                        color: c.isPassed
-                            ? kTextColor.withOpacity(0.6)
-                            : kTextColor,
-                      ),
-                      SizedBox(width: 20.0),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Row(
-                            children: <Widget>[
-                              Icon(
-                                Icons.location_on,
-                                color: c.isPassed
-                                    ? Theme.of(context)
-                                    .accentColor
-                                    .withOpacity(0.3)
-                                    : Theme.of(context).accentColor,
-                                size: 20.0,
-                              ),
-                              SizedBox(width: 10.0),
-                              Text(
-                                c.place,
-                                style: TextStyle(
-                                  color: c.isPassed
-                                      ? kTextColor.withOpacity(0.3)
-                                      : kTextColor,
-                                  fontSize: 15.0,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                            ],
+                Session c = sessionList[index];
+
+                _getStatus(c);
+                return Column(
+                  children: <Widget>[
+                    Row(
+                      children: <Widget>[
+                        Text(
+                          "${dateFormat.format(c.dateS)}",
+                          style: TextStyle(
+                            color: c.isPassed
+                                ? Colors.white.withOpacity(0.2)
+                                : Colors.white,
+                            fontSize: 15.0,
                           ),
-                          SizedBox(height: 10.0),
-                          Row(
-                            children: <Widget>[
-                              Icon(
-                                Icons.person,
-                                color: c.isPassed
-                                    ? Theme.of(context)
-                                    .accentColor
-                                    .withOpacity(0.3)
-                                    : Theme.of(context).accentColor,
-                                size: 20.0,
-                              ),
-                              SizedBox(width: 8.0),
-                              Text(
-                                c.name,
-                                style: TextStyle(
-                                  color: c.isPassed
-                                      ? kTextColor.withOpacity(0.3)
-                                      : kTextColor,
-                                  fontSize: 15.0,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                            ],
+                        ),
+                        SizedBox(width: 42.0),
+                        _getTime(c, context),
+                        SizedBox(width: 15.0),
+                        Text(
+                          c.nameOfCourse,
+                          style: TextStyle(
+                            color: c.isPassed
+                                ? Colors.yellow.withOpacity(0.4)
+                                : Colors.white,
+                            fontSize: 18.0,
                           ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ],
-              );
-            },
-          );
+                        ),
+                        // SizedBox(width: 30.0),
+                        // c.isHappening
+                        //     ? Container(
+                        //         height: 25.0,
+                        //         width: 40.0,
+                        //         decoration: BoxDecoration(
+                        //           color: Theme.of(context).accentColor,
+                        //           borderRadius: BorderRadius.circular(5.0),
+                        //         ),
+                        //       )
+                        //     : Container(),
+                      ],
+                    ),
+                    SizedBox(height: 12.0),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Container(
+                          margin: EdgeInsets.only(left: 90.0, bottom: 50.0),
+                          width: 0.4,
+                          height: 80.0,
+                          color: c.isPassed
+                              ? kTextColor.withOpacity(0.6)
+                              : kTextColor,
+                        ),
+                        SizedBox(width: 20.0),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Row(
+                              children: <Widget>[
+                                Icon(
+                                  Icons.location_on,
+                                  color: c.isPassed
+                                      ? Theme
+                                      .of(context)
+                                      .accentColor
+                                      .withOpacity(0.3)
+                                      : Theme
+                                      .of(context)
+                                      .accentColor,
+                                  size: 20.0,
+                                ),
+                                SizedBox(width: 10.0),
+                                Text(
+                                  c.place,
+                                  style: TextStyle(
+                                    color: c.isPassed
+                                        ? kTextColor.withOpacity(0.3)
+                                        : kTextColor,
+                                    fontSize: 15.0,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 10.0),
+                            Row(
+                              children: <Widget>[
+                                Icon(
+                                  Icons.person,
+                                  color: c.isPassed
+                                      ? Theme
+                                      .of(context)
+                                      .accentColor
+                                      .withOpacity(0.3)
+                                      : Theme
+                                      .of(context)
+                                      .accentColor,
+                                  size: 20.0,
+                                ),
+                                SizedBox(width: 8.0),
+                                Text(
+                                  c.name,
+                                  style: TextStyle(
+                                    color: c.isPassed
+                                        ? kTextColor.withOpacity(0.3)
+                                        : kTextColor,
+                                    fontSize: 15.0,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                );
+              },
+            );
+          }
         });
   }
 

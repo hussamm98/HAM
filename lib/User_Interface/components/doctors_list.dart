@@ -30,19 +30,16 @@ class MyDoctors extends StatelessWidget {
     return FutureBuilder<DocModel>(
         future: getUser(),
         builder: (context, snapshot) {
-          print(snapshot.data.listOfDoctro);
-          final doctorsList = snapshot.data.listOfDoctro;
-          if (snapshot.data.listOfDoctro == null) {
-            return Container(
-              child: Center(
-                child: Text('Loading .....'),
-              ),
-            );
+          if (snapshot.connectionState == ConnectionState.waiting ||
+              snapshot.data == null) {
+            return Center(child: CircularProgressIndicator());
           } else {
             return Container(
               child: ListView.builder(
-                itemCount: doctorsList.length,
+                itemCount: snapshot.data.listOfDoctro.length,
                 itemBuilder: (context, int index) {
+                  print(snapshot.data.listOfDoctro);
+                  final doctorsList = snapshot.data.listOfDoctro;
                   return DocMenuItemCard(doctor: doctorsList[index]);
                 },
               ),

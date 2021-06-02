@@ -15,8 +15,8 @@ class AllFolders extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         title: Text(
-          "All Of Materials ${current + 1}",
-          style: TextStyle(fontSize: 23, fontStyle: FontStyle.italic),
+          "All Of Materials Semester ${current + 1}",
+          style: TextStyle(fontSize: 21, fontStyle: FontStyle.italic),
         ),
       ),
       body: GridView.count(

@@ -30,15 +30,20 @@ class MyAssistants extends StatelessWidget {
     return FutureBuilder<AssModel>(
         future: getUser(),
         builder: (context, snapshot) {
-          final assistantList = snapshot.data.listOfAssistant;
-          return Container(
-            child: ListView.builder(
-              itemCount: assistantList.length,
-              itemBuilder: (context, int index) {
-                return AsMenuItemCard(assistant: assistantList[index]);
-              },
-            ),
-          );
+          if (snapshot.connectionState == ConnectionState.waiting ||
+              snapshot.data == null) {
+            return Center(child: CircularProgressIndicator());
+          } else {
+            return Container(
+              child: ListView.builder(
+                itemCount: snapshot.data.listOfAssistant.length,
+                itemBuilder: (context, int index) {
+                  final assistantList = snapshot.data.listOfAssistant;
+                  return AsMenuItemCard(assistant: assistantList[index]);
+                },
+              ),
+            );
+          }
         });
   }
 }
