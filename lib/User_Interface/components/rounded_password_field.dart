@@ -29,7 +29,7 @@ class _RoundedPasswordFieldState extends State<RoundedPasswordField> {
     return TextFieldContainer(
       child: TextFormField(
         obscureText: password,
-        keyboardType: TextInputType.phone,
+        keyboardType: TextInputType.text,
         //modified textfield
         onChanged: (val) => password1 = val,
         validator: //passwordValidator//MinLengthValidator(6, errorText: "Should be atleast 6 Characters")

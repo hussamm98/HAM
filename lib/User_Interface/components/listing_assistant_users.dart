@@ -33,7 +33,7 @@ class _AllOfAssistState extends State<AllOfAssist> {
                   width: width,
                   padding: EdgeInsets.only(top: 25),
                   decoration: BoxDecoration(
-                      color: Color(0xfff0e3ca),
+                      color: Colors.grey[300],
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(50),
                           topRight: Radius.circular(50))),
