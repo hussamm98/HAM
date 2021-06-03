@@ -21,11 +21,11 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: kTextColor,
+      backgroundColor: Colors.grey[300],
       drawer: MyDrawer(user: widget.user),
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Color(0xFF6a197d),
+        backgroundColor: Color(0xFF4a1c40),
         title: widget.user == null
             ? Container()
             : Text("Welcome ${widget.user.name}"),
@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Container(
               padding: EdgeInsets.all(40.0),
               decoration: BoxDecoration(
-                color: Color(0xfff4eeff),
+                color: Colors.grey[300],
                 borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(100),
                     topRight: Radius.circular(100),
@@ -63,17 +63,16 @@ class _HomeScreenState extends State<HomeScreen> {
                 Text(
                   "Current Alerts",
                   style: TextStyle(
-                    color: Color(0xff1c1427),
-                    fontSize: 22.0,
-                    fontWeight: FontWeight.bold,
-                    fontStyle: FontStyle.italic
-                  ),
+                      color: Color(0xff4a1c40),
+                      fontSize: 22.0,
+                      fontWeight: FontWeight.bold,
+                      fontStyle: FontStyle.italic),
                 )
               ],
             ),
             Container(
                 width: double.infinity,
-                color: kTextColor,
+                color: Colors.grey[300],
                 margin: EdgeInsets.all(30),
                 child: RecentsAlerts(
                   user: widget.user,

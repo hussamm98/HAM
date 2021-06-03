@@ -37,7 +37,7 @@ class _RecentsAlertsState extends State<RecentsAlerts> {
               height: 120.0,
               width: 20,
               decoration: BoxDecoration(
-                color: Theme.of(context).accentColor,
+                color: Color(0xff962d2d),
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(30.0),
                   bottomLeft: Radius.circular(30.0),
@@ -48,10 +48,10 @@ class _RecentsAlertsState extends State<RecentsAlerts> {
               child: Container(
                 margin: EdgeInsets.only(bottom: 30.0),
                 padding: EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 10.0),
-                height: 120.0,
+                height: 121,
                 width: 3.0,
                 decoration: BoxDecoration(
-                  color: kCardColor,
+                  color: Color(0xff4a1c40),
                   borderRadius: BorderRadius.only(
                     topRight: Radius.circular(12.0),
                     bottomRight: Radius.circular(12.0),
@@ -74,14 +74,14 @@ class _RecentsAlertsState extends State<RecentsAlerts> {
                           children: <Widget>[
                             Icon(
                               AntDesign.clockcircle,
-                              color: Theme.of(context).accentColor,
+                              color: Colors.white,
                               size: 17.0,
                             ),
                             SizedBox(width: 10.0),
                             Text(
                               "${DateTime.now().weekday == alert.dateA.weekday ? "Today" : DateFormat.EEEE().format(alert.dateA)}, ${dateFormat.format(alert.dateA)}",
                               style: TextStyle(
-                                color: kTextColor,
+                                color: Colors.white,
                                 fontSize: 15.0,
                               ),
                             ),
@@ -92,14 +92,14 @@ class _RecentsAlertsState extends State<RecentsAlerts> {
                           children: <Widget>[
                             Icon(
                               Icons.my_library_books,
-                              color: Theme.of(context).accentColor,
+                              color: Colors.white,
                               size: 17.0,
                             ),
                             SizedBox(width: 10.0),
                             Text(
                               alert.title,
                               style: TextStyle(
-                                color: kTextColor,
+                                color: Colors.white,
                                 fontSize: 15.0,
                               ),
                             ),
@@ -112,7 +112,7 @@ class _RecentsAlertsState extends State<RecentsAlerts> {
                       child: CustomPaint(
                         foregroundPainter: CountdownPainter(
                           bgColor: kTextColor,
-                          lineColor: _getColor(context, percent),
+                          lineColor: Color(0xff962d2d),
                           percent: percent,
                           width: 4.0,
                         ),
@@ -124,7 +124,7 @@ class _RecentsAlertsState extends State<RecentsAlerts> {
                               Text(
                                 "$hoursLeft",
                                 style: TextStyle(
-                                  color: _getColor(context, percent),
+                                  color: Color(0xfff6e5e9),
                                   fontSize: 24.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -132,7 +132,7 @@ class _RecentsAlertsState extends State<RecentsAlerts> {
                               Text(
                                 "Hours left",
                                 style: TextStyle(
-                                  color: _getColor(context, percent),
+                                  color: Color(0xfff6e5e9),
                                   fontSize: 12.0,
                                 ),
                               ),

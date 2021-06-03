@@ -26,6 +26,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
     buildUser(id, satudrday);
     List<Session> schedule;
     return Scaffold(
+      backgroundColor: Colors.grey[300],
       drawer: MyDrawer(user: user),
       appBar: AppBar(
         title: Text(
@@ -37,17 +38,18 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
         children: <Widget>[
           Padding(
             padding: const EdgeInsets.fromLTRB(80, 15, 25, 15),
-            child: Text("Your Today Courses" , style :TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 25,
-              fontStyle: FontStyle.italic,
-              color: Color(0xff1c1427),
-            )),
+            child: Text("Your Today Courses",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 25,
+                  fontStyle: FontStyle.italic,
+                  color: Color(0xff4a1c40),
+                )),
           ),
           Container(
             padding: EdgeInsets.all(50.0),
             decoration: BoxDecoration(
-              color: Color(0xff1c1427),
+              color: Color(0xff4a1c40),
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(80.0),
                 topRight: Radius.circular(80.0),

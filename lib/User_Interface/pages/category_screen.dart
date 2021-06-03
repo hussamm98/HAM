@@ -58,6 +58,7 @@ class CategoryScreen extends StatelessWidget {
                       "Level ${index + 1}",
                       style: TextStyle(
                         fontSize: 27,
+                        color: Color(0xFF4a1c40),
                       ),
                     ),
                   ),
@@ -68,7 +69,10 @@ class CategoryScreen extends StatelessWidget {
                       Text(
                         '   is my level.',
                         style: TextStyle(
-                            fontSize: 14, fontStyle: FontStyle.italic),
+                          fontSize: 14,
+                          fontStyle: FontStyle.italic,
+                          color: Color(0xFF4a1c40),
+                        ),
                       ),
                       SizedBox(height: size.height * 0.008),
                       Container(height: size.height * 0.015),

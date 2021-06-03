@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+
 //dcd6f7
 const kTextColor = Color(0xFFdcd6f7);
-const kPrimaryColor = Color(0xFF6a197d);
+const kPrimaryColor = Color(0xFF4a1c40);
 const kPrimaryLightColor = Color(0xFFF1E6FF);
 const kHourColor = Color(0xFFF5C35A);
 const kCardColor = Color(0xFF282B30);
@@ -19,4 +20,4 @@ const warninngColor = Color(0xFFF3BB1C);
 const errorColor = Color(0xFFF03738);
 const defaultPadding = 14.0;
 final List<String> demoContactsImage =
-List.generate(5, (index) => "assets/images/user_${index + 1}.png");
+    List.generate(5, (index) => "assets/images/user_${index + 1}.png");

@@ -19,23 +19,23 @@ class MyDrawer extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Drawer(
         child: Container(
-      color: Color(0xfff4eeff),
+      color: Colors.grey[300],
       child: ListView(
         children: <Widget>[
           UserAccountsDrawerHeader(
             decoration: BoxDecoration(
-              color: Color(0xfff4eeff),
+              color: Colors.grey[300],
             ),
             accountEmail: Text(
               '${user.email}',
               // "${user.email}",
-              style: TextStyle(color: Colors.black, fontSize: 12),
+              style: TextStyle(color: Color(0xff4a1c40), fontSize: 12),
             ),
             //code hereeeeeeeeeeeeeeeeeeeeeeeee
             accountName: Text(
               '${user.name}',
               // "${user.name} ", // code here
-              style: TextStyle(color: Colors.black, fontSize: 18),
+              style: TextStyle(color: Color(0xff4a1c40), fontSize: 18),
             ),
             currentAccountPicture: ClipRRect(
               borderRadius: BorderRadius.circular(200),
@@ -50,7 +50,7 @@ class MyDrawer extends StatelessWidget {
             title: Text(
               "Doctors",
               style: TextStyle(
-                color: Colors.black,
+                color: Color(0xff4a1c40),
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
               ),
@@ -82,7 +82,7 @@ class MyDrawer extends StatelessWidget {
             title: Text(
               "Assistant",
               style: TextStyle(
-                color: Colors.black,
+                color: Color(0xff4a1c40),
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
               ),
@@ -114,7 +114,7 @@ class MyDrawer extends StatelessWidget {
             title: Text(
               "Chat Bot",
               style: TextStyle(
-                color: Colors.black,
+                color: Color(0xff4a1c40),
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
               ),
@@ -137,7 +137,7 @@ class MyDrawer extends StatelessWidget {
             title: Text(
               "Masseges",
               style: TextStyle(
-                color: Colors.black,
+                color: Color(0xff4a1c40),
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
               ),

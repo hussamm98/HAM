@@ -149,7 +149,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "Change Password",
                                     style: TextStyle(
-                                        color: kPrimaryColor,
+                                        color: Color(0xff4a1c40),
                                         fontSize: 16,
                                         fontWeight: FontWeight.bold),
                                   ),
