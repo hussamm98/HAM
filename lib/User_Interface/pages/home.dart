@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_auth/User_Interface/components/courses.dart';
 import 'package:flutter_auth/User_Interface/components/drawer.dart';
-import 'package:flutter_auth/User_Interface/components/navigation_bar.dart';
 import 'package:flutter_auth/User_Interface/components/temp_alerts.dart';
-import 'package:flutter_auth/User_Interface/pages/UserModel.dart';
 import 'package:flutter_auth/User_Interface/pages/UserModel.dart';
 
 import '../../constants.dart';
@@ -13,6 +11,7 @@ class HomeScreen extends StatefulWidget {
   final UserModel user;
 
   const HomeScreen({Key key, this.user}) : super(key: key);
+
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
@@ -29,23 +28,21 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: Color(0xFF6a197d),
         title: widget.user == null
             ? Container()
-            : Text(
-                "Welcome ${widget.user.name}"),
+            : Text("Welcome ${widget.user.name}"),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(height: size.height *0.01),
+            SizedBox(height: size.height * 0.01),
             Container(
               padding: EdgeInsets.all(40.0),
               decoration: BoxDecoration(
-                //     color: Theme.of(context).primaryColor,
-                color: kPrimaryColor,
+                color: Color(0xfff4eeff),
                 borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(60),
-                    topRight: Radius.circular(60),
-                    bottomLeft: Radius.circular(60),
-                    bottomRight: Radius.circular(60)),
+                    topLeft: Radius.circular(100),
+                    topRight: Radius.circular(100),
+                    bottomLeft: Radius.circular(100),
+                    bottomRight: Radius.circular(100)),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -53,26 +50,27 @@ class _HomeScreenState extends State<HomeScreen> {
                   widget.user == null
                       ? Container()
                       : MyCourses(
-                          courses: widget
-                              .user.courses), //da ally btktbo 3lshan tzhr l list
-                  SizedBox(height: size.height * 0.03),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Current Alerts",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      )
-                    ],
-                  ),
+                          courses: widget.user
+                              .courses), //da ally btktbo 3lshan tzhr l list
+                  SizedBox(height: size.height * 0.005),
                 ],
               ),
             ),
-            SizedBox(height: size.height *0.05),
+            SizedBox(height: size.height * 0.03),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Current Alerts",
+                  style: TextStyle(
+                    color: Color(0xff1c1427),
+                    fontSize: 22.0,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic
+                  ),
+                )
+              ],
+            ),
             Container(
                 width: double.infinity,
                 color: kTextColor,

@@ -1,12 +1,8 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_auth/User_Interface/components/build_classes.dart';
 import 'package:flutter_auth/User_Interface/components/drawer.dart';
 import 'package:flutter_auth/User_Interface/components/week_days.dart';
-import 'package:flutter_icons/flutter_icons.dart';
 import 'package:intl/intl.dart';
-import '../../constants.dart';
 import 'ScheduleModel.dart';
 import 'UserModel.dart';
 import 'login_screen.dart';
@@ -24,8 +20,6 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
   final DateFormat dateFormat = DateFormat("hh:mm a");
   @override
   Widget build(BuildContext context) {
-
-
     Container();
     String satudrday = "Saturday";
     String id = user.id;
@@ -42,8 +36,13 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
       body: ListView(
         children: <Widget>[
           Padding(
-            padding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
-            child: WeekDays(),
+            padding: const EdgeInsets.fromLTRB(80, 15, 25, 15),
+            child: Text("Your Today Courses" , style :TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 25,
+              fontStyle: FontStyle.italic,
+              color: Color(0xff1c1427),
+            )),
           ),
           Container(
             padding: EdgeInsets.all(50.0),

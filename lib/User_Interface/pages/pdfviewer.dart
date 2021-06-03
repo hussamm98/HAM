@@ -19,7 +19,7 @@ class _pdfviewerState extends State<pdfviewer> {
           ),
         ),
         body: Center(
-          child: PDF().fromAsset("assets/images/AILecture_1_Introduction.pdf"),
+          child: PDF().fromAsset("assets/images/DM.pdf"),
         ));
   }
 }

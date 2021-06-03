@@ -102,6 +102,32 @@ class AllLectures extends StatelessWidget {
                 ),
               );},
           ),
+          GestureDetector(
+            child: MyLecture(
+              lecname: "lecture 7",
+            ),
+            onTap: () {Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return pdfviewer();
+                },
+              ),
+            );},
+          ),
+          GestureDetector(
+            child: MyLecture(
+              lecname: "lecture 8",
+            ),
+            onTap: () {Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return pdfviewer();
+                },
+              ),
+            );},
+          ),
         ],
       ),
     );

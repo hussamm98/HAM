@@ -4,6 +4,7 @@ import 'package:flutter_auth/User_Interface/components/listing_doctor_users.dart
 import 'package:flutter_auth/User_Interface/components/rounded_button.dart';
 import 'package:flutter_auth/User_Interface/pages/UserModel.dart';
 import 'package:flutter_svg/svg.dart';
+
 import '../pages/welcome_screen.dart';
 import 'listing_assistant_users.dart';
 
@@ -11,17 +12,20 @@ class MyDrawer extends StatelessWidget {
   final UserModel user;
 
   const MyDrawer({Key key, this.user}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     //print('drawer user name: ${user.name}');
     Size size = MediaQuery.of(context).size;
     return Drawer(
         child: Container(
-      color: Color(0xffffe6e6),
+      color: Color(0xfff4eeff),
       child: ListView(
         children: <Widget>[
           UserAccountsDrawerHeader(
-            decoration: BoxDecoration(color: Color(0xffffe6e6)),
+            decoration: BoxDecoration(
+              color: Color(0xfff4eeff),
+            ),
             accountEmail: Text(
               '${user.email}',
               // "${user.email}",

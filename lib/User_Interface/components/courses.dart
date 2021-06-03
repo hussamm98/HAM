@@ -19,17 +19,17 @@ class MyCourses extends StatelessWidget {
                 text: "Your Courses Number is: ",
                 style: TextStyle(
                     fontSize: 16,
-                    color: Colors.black,
+                    color: kCardColor,
                     fontWeight: FontWeight.normal
                 ,
                 fontStyle: FontStyle.italic),
                 children: [
                   TextSpan(
-                    text: "${courses.length}",
+                    text: "  ${courses.length}",
                     // hereeeeeeeeeeeeeee yangmmmmmmmmm
                     style: TextStyle(
                         fontSize: 20,
-                        color: Colors.black,
+                        color: kCardColor,
                         fontWeight: FontWeight.bold),
                   ),
                 ]),
@@ -42,10 +42,9 @@ class MyCourses extends StatelessWidget {
       SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(
-            ////// fe sho3'l raye2 hnaaaaaaaaaaaaaaaaaaaa
             children: courses
                 .map((course) => buildTaskItem(
-                    int.parse(course.hours), course.courseName, kTextColor))
+                    int.parse(course.hours), course.courseName, kCardColor))
                 .toList()),
       )
     ]);
@@ -59,7 +58,7 @@ Container buildTaskItem(int numDays, String courseTitle, Color color) {
     height: 90,
     width: 150,
     decoration: BoxDecoration(
-      color: color.withOpacity(0.4),
+      color: kCardColor,
       borderRadius: BorderRadius.circular(30),
     ),
     child: Column(
@@ -74,7 +73,7 @@ Container buildTaskItem(int numDays, String courseTitle, Color color) {
               height: 10,
               width: 10,
               decoration: BoxDecoration(
-                color: color,
+                color: Color(0xff185adb),
                 borderRadius: BorderRadius.circular(10),
               ),
             ),
@@ -82,7 +81,7 @@ Container buildTaskItem(int numDays, String courseTitle, Color color) {
               width: 10,
             ),
             Text(
-              "$numDays Credit Hours", // there is a code here :"))))))
+              "$numDays Credit Hours",
               style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold, color: Colors.white),
             ),
           ],
@@ -95,7 +94,8 @@ Container buildTaskItem(int numDays, String courseTitle, Color color) {
           child: Center(
             child: Text(
               courseTitle,
-              style: TextStyle(fontSize: 18,  fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 18,  fontWeight: FontWeight.bold ,
+              color: Colors.white),
             ),
           ),
         ),

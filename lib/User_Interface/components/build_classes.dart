@@ -99,17 +99,6 @@ class _BuildClassesState extends State<BuildClasses> {
                             fontSize: 18.0,
                           ),
                         ),
-                        // SizedBox(width: 30.0),
-                        // c.isHappening
-                        //     ? Container(
-                        //         height: 25.0,
-                        //         width: 40.0,
-                        //         decoration: BoxDecoration(
-                        //           color: Theme.of(context).accentColor,
-                        //           borderRadius: BorderRadius.circular(5.0),
-                        //         ),
-                        //       )
-                        //     : Container(),
                       ],
                     ),
                     SizedBox(height: 12.0),
