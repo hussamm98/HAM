@@ -54,10 +54,10 @@ class _AllOfAssistState extends State<AllOfAssist> {
                             indicatorColor: Colors.transparent,
                             tabs: <Widget>[
                               Tab(
-                                child: Text("Assistant"),
+                                child: Text("Assistant" , style :TextStyle( color: Color(0xFF4a1c40))),
                               ),
                               Tab(
-                                child: Text("Doctors"),
+                                child: Text("Doctors" , style :TextStyle( color: Color(0xFF4a1c40))),
                               ),
                             ],
                           ),

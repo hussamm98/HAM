@@ -57,7 +57,7 @@ class _DocMenuItemCardState extends State<DocMenuItemCard> {
                           Text(
                             widget.doctor.name,
                             style: TextStyle(
-                                fontSize: 17, fontWeight: FontWeight.bold),
+                                fontSize: 18, fontWeight: FontWeight.bold , color: Color(0xFF4a1c40)),
                           ),
                           SizedBox(
                             height: 5,
@@ -66,7 +66,7 @@ class _DocMenuItemCardState extends State<DocMenuItemCard> {
                             widget.doctor.nameOfDeb,
                             style: TextStyle(
                                 fontSize: 15,
-                                color: Colors.grey[500],
+                                color: Color(0xFF4a1c40),
                                 fontWeight: FontWeight.w400),
                           ),
                           SizedBox(

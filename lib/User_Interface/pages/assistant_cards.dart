@@ -52,7 +52,7 @@ class _AsMenuItemCardState extends State<AsMenuItemCard> {
                           Text(
                             widget.assistant.name,
                             style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.bold),
+                                fontSize: 18, fontWeight: FontWeight.bold, color:Color(0xFF4a1c40) ),
                           ),
                           SizedBox(
                             height: 6,
@@ -61,7 +61,7 @@ class _AsMenuItemCardState extends State<AsMenuItemCard> {
                             widget.assistant.nameOfDeb,
                             style: TextStyle(
                                 fontSize: 15,
-                                color: Colors.grey[500],
+                                color: Color(0xFF4a1c40),
                                 fontWeight: FontWeight.w500),
                           ),
                           SizedBox(

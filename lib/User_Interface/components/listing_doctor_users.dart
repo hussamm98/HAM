@@ -33,7 +33,7 @@ class _AllOfDocsState extends State<AllOfDocs> {
                   width: width,
                   padding: EdgeInsets.only(top: 25),
                   decoration: BoxDecoration(
-                      color: Color(0xfff0e3ca),
+                      color: Colors.grey[300],
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(50),
                           topRight: Radius.circular(50))),
@@ -54,10 +54,10 @@ class _AllOfDocsState extends State<AllOfDocs> {
                             indicatorColor: Colors.transparent,
                             tabs: <Widget>[
                               Tab(
-                                child: Text("Doctors"),
+                                child: Text("Doctors" , style :TextStyle( color: Color(0xFF4a1c40))),
                               ),
                               Tab(
-                                child: Text("Assistant"),
+                                child: Text("Assistant" , style :TextStyle( color: Color(0xFF4a1c40))),
                               ),
                             ],
                           ),

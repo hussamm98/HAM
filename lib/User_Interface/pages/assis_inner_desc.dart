@@ -62,7 +62,7 @@ class _AsDetailPageState extends State<AsDetailPage> {
                 margin: EdgeInsets.only(top: height * 0.55),
                 padding: EdgeInsets.all(60),
                 decoration: BoxDecoration(
-                  color: Color(0xfff0e3ca),
+                  color: Colors.grey[300],
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(60),
                       topRight: Radius.circular(60)),
