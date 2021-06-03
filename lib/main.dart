@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_auth/User_Interface/pages/login_screen.dart';
 import 'package:flutter_auth/User_Interface/pages/welcome_screen.dart';
 import 'package:flutter_auth/constants.dart';
 
@@ -18,7 +19,7 @@ class _MyAppState extends State<MyApp> {
         primaryColor: kPrimaryColor,
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: WelcomeScreen(),
+      home: LoginScreen(),
     );
   }
 }

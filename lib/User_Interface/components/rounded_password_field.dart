@@ -28,6 +28,8 @@ class _RoundedPasswordFieldState extends State<RoundedPasswordField> {
   Widget build(BuildContext context) {
     return TextFieldContainer(
       child: TextFormField(
+        obscureText: password,
+        keyboardType: TextInputType.phone,
         //modified textfield
         onChanged: (val) => password1 = val,
         validator: //passwordValidator//MinLengthValidator(6, errorText: "Should be atleast 6 Characters")
@@ -50,12 +52,12 @@ class _RoundedPasswordFieldState extends State<RoundedPasswordField> {
           hintText: widget.hint,
           icon: Icon(
             Icons.lock,
-            color: kPrimaryColor,
+            color: Color(0xFF4a1c40),
           ),
           suffixIcon: IconButton(
             icon: Icon(
               password ? Icons.visibility : Icons.visibility_off,
-              color: Color(0xFF6F35A5),
+              color: Color(0xFF4a1c40),
             ),
             onPressed: () {
               setState(() {
@@ -64,8 +66,6 @@ class _RoundedPasswordFieldState extends State<RoundedPasswordField> {
             },
           ),
         ),
-    obscureText: password,
-    keyboardType: TextInputType.phone,
       ),
 
     );
